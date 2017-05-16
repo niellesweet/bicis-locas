@@ -15,12 +15,12 @@ var tipoBici = document.getElementsByTagName('select')[0];
         	return false;
 		} 
 		else if (nombre.charAt(0)!==nombre.charAt(0).toUpperCase()){ 
-			nombre.charAt(0)!==nombre.charAt(0).toUpperCase()
 			alert('Debe comenzar con una mayuscula');
 			return false;
 		}
-		else {
-			return true;
+
+		else{
+			return true
 		}
 	}
 	validateNombre();
@@ -45,7 +45,7 @@ var tipoBici = document.getElementsByTagName('select')[0];
 //El campo email debe tener un formato valido//
     //validar email//
     function validateEmail(){
-    	if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/.test(email)) ) {
+    	if( !(/\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/) ) {
   		alert ('Ingrese un email valido!');
   			return false;
 		}
@@ -53,6 +53,7 @@ var tipoBici = document.getElementsByTagName('select')[0];
 			return true
 		}
 	}
+	validateEmail();
 
 //La contraseña debe tener al menos 6 caracteres y debe ser diferente a 'password', '123456' o '089754'//
 	//validar contraseña//
@@ -68,7 +69,8 @@ var tipoBici = document.getElementsByTagName('select')[0];
 		else {
 			return true;
 		}
-	}	
+	}
+	validatePassword();	
     
     function validateBici(){
     	if (tipoBici == null || tipoBici <= 0){
@@ -76,5 +78,6 @@ var tipoBici = document.getElementsByTagName('select')[0];
     		return false
     	}
     }
+    validateBici();
 }
 validateForm();
